@@ -40,7 +40,7 @@
  #
 
 # This script parses the nao-v4.blend file from Aldebaran robotics, parses it
-# into several .dae visual files and .stl collsion files to use with a URDF. 
+# into several .dae visual files and .stl collision files to use with a URDF. 
 # It also decimates the collision meshes to help with faster collision checking
 
 import bpy
@@ -55,7 +55,7 @@ if not os.path.isdir(visual_mesh_dir):
 
 # Get the folder where the collision meshes will be saved
 collision_mesh_dir = os.path.join(roslib.packages.get_pkg_dir('nao_description'), 'mesh', 'collision', 'stl')
-print("Exporting collsion meshes to <%s>." % collision_mesh_dir)
+print("Exporting collision meshes to <%s>." % collision_mesh_dir)
 if not os.path.isdir(collision_mesh_dir):
     os.makedirs(collision_mesh_dir)
 
